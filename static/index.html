@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <title>RP1 Movie Egg 1</title>
+    <style>
+    body { /*only for things in the body ie. everything shown*/
+      margin: 0px; /*set no margin*/
+      border: none; /*set no border*/
+      overflow: hidden; /*hide everything that goes off the edges*/
+    }
+    #canvas { /*only for the element with the id canvas*/
+      z-index: 1; /*set the z index to 1*/
+    }
+    #form { /*only for items with the tag form*/
+      position: absolute; /*allow it to be moved*/
+      top:45%; /*make it 45% down from the top*/
+      right: 45%; /*make it 45% over from the right*/
+      z-index: 2; /*make the z index 2 so it shows on top the canvas */
+      float: top; /*make it the top of the possible spot*/
+    }
+    #doge { /*only for white text*/
+      color: hotpink; /*make it white text*/
+    }
+    </style>
+  </head>
+  <body>
+    <canvas id="canvas"></canvas>
+    <center><div id="form"><input type="text" placeholder="User" id="name" maxlength="8"><button id="submit" onclick="submitName()">Submit</button><br><h3 id="doge">Hints: <br> Microsoft will always be better than Apple. <br> U Turns <br> Ready Player One <br> Hacking
+     <br> Complicated usernames <br> Socket IO <br> emit win </h3></div></center>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.0/socket.io.js"></script>
+    <script src="/static/game.js"></script>
+  </body>
+</html>
